@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% assignments.each do |assignment| %>
+      <tr>
+        <td><%= link_to assignment.title, assignment %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

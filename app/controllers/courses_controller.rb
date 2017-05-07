@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :set_course, only: [:show, :edit, :update, :destroy, :students, :assignments]
 
   # GET /courses
   # GET /courses.json
@@ -19,6 +19,13 @@ class CoursesController < ApplicationController
 
   # GET /courses/1/edit
   def edit
+  end
+
+  def students
+  end
+
+  def assignments
+    @assignments = Assignment.where("course_id = ?", @course.id)
   end
 
   # POST /courses
